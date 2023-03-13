@@ -1,7 +1,7 @@
 *{
     margin:0;
     padding:0;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font: 600;
     font-size: large;
 }
@@ -61,9 +61,13 @@
     text-align: center;
     color: #fff;
 }
+.content h1{
+    font-size: 50px;
+}
+
 .content p{
     margin: 20px auto;
-    font-weight: 100;
+    font-weight: 500;
     line-height: 25px;
     margin-left: 10px;
     margin-right: 10px;
@@ -100,4 +104,81 @@ button:hover span{
 }
 button:hover{
     border: none;
+}
+
+/*---main---*/
+main{
+    background-color: #4b5659;
+}
+
+.introduction{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+
+h2{
+    font-size: 46px;
+    font-weight: 700;
+    color: #db9d16;
+}
+
+h3{
+    color: #fff;
+}
+
+p{
+    color: #fff;
+}
+
+.row{
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+.option{
+    flex-basis: 30%;
+    background: #1AC1F5;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    box-shadow: darkorange;
+}
+
+.option3{
+    flex-basis: 30%;
+   
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    box-shadow: darkorange;
+}
+.image{
+    width: 100%;
+    border-radius: 50px;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+}
+
+footer {
+    background-color: rgb(59, 68, 59);
+    display: flex;
+    color: white;
+  }
+.mail{
+    color: #fff;
+}
+
+.author{
+    background:  #dbc716;
+    border-radius: 10px;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    box-sizing: border-box;
+    padding: 20px 12px;
+    box-shadow: darkorange;
 }
