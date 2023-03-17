@@ -36,7 +36,7 @@
     max-width: 300px;
 }
 .tile{
-    border: 1px solid black;
+    border: 1px solid rgba(234, 215, 215, 0.323);
     min-width: 100px;
     min-height: 100px;
     display: flex;

@@ -113,7 +113,8 @@ function handleResultValidation() {
         isGameActive = false;
     }
   }
-  
+
+/*Ruch gracza*/
 const userAction = (tile, index) => {
     if (isPossibleMove(tile) && isGameActive) {
         tiles[index].innerText = currentPlayer;
