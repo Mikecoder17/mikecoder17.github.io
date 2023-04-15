@@ -21,21 +21,26 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    
 }
 .logo{
     width: 120px;
     cursor: pointer;
 }
+
 .navbar ul li{
     list-style: none;
     display: inline-block;
     margin: 0 20px;
     position: relative;
+   
 }
 .navbar ul li a{
     text-decoration: none;
     color:#fff;
     text-transform: uppercase;
+    font-size: 30px;
+
 }
 .navbar ul li::after{
     content: '';
@@ -51,6 +56,7 @@
 
 .navbar ul li:hover::after{
     width: 100%;
+    
 }
 
 .content{
@@ -130,11 +136,20 @@ h3{
 p{
     color: #fff;
 }
+.line{
+    height: 5px;
+    background: #dbc716;
+    border: 1px;
+    margin-bottom: 20px; 
+    text-align: center"
+}
 
 .row{
     margin-top: 5%;
     display: flex;
     justify-content: space-between;
+    width: 100%;
+
 }
 .option{
     flex-basis: 30%;
@@ -162,6 +177,14 @@ p{
     padding: 20px 12px;
     box-sizing: border-box;
 }
+.ticbackground
+{   margin-top: 100px;
+    background-image: 
+    linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)),
+    url(ticbackground_image.png);
+    background-size: cover;
+    background-position: center;
+}
 
 footer {
     background-color: rgb(59, 68, 59);
@@ -181,3 +204,52 @@ footer {
     padding: 20px 12px;
     box-shadow: darkorange;
 }
+
+
+@media only screen and (max-width: 640px){
+    .row{
+    flex-direction: column;
+    }   
+    .content{
+        margin-top: 30%;
+    }
+    .content h1{
+        font-size: 30px;
+    }
+    .introduction h2{
+        font-size: 35px;
+        margin-bottom: 5%;
+    }
+    .line{
+        margin-bottom: 20%;
+    }
+  
+   
+  
+    
+}
+
+@media only screen and (max-width: 900px){
+    .controls{
+        flex-direction: column;
+    }
+   
+    .navbar ul li{
+        margin-top: 5%;
+        flex-direction: column;
+    }
+    .logo{
+        margin: auto;
+        height: 50%;
+    }
+    .navbar ul li a{
+        font-size: 20px;
+    }
+   
+}
+
+
+
+    
+
+

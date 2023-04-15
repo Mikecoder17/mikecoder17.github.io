@@ -6,7 +6,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
        
         <title>Sklep z cukierkami</title>
+        <link rel="stylesheet" href="ticstyle.css">
+        <script src="ticscript.js"></script>
         <link rel="stylesheet" href="style.css">
+        
     </head>
 
     <body>
@@ -15,10 +18,8 @@
             <div class="navbar">
                 <img alt="logo" src="logo.jpg" class="logo">
                 <ul>
-                    <li><a href="tictactoe/index.html">Kółko i krzyżyk </a></li>
-                    <li><a href="#">Cytrynki </a></li>
+                    <li><a href="tictactoe/index.html">TicTacToe </a></li>
                     <li><a href="#">Malaga </a></li>
-                    <li><a href="#">Tiki-Taki </a></li>
                     <li><a href="#">Kasztanki </a></li>
                 </ul>
             </div>
@@ -41,7 +42,7 @@
     <main>
         <section class="introduction">
             <h2>Nasz sklep z cukierkami</h2>
-            <hr style="height: 5px; background: #dbc716; border: 1px; margin-bottom: 20px; text-align: center">
+            <hr class="line">
 
             <p>Cukierek (właściwie cukier kandyzowany) – wyrób cukierniczy wykonany ze stężonego roztworu cukru w wodzie, do którego dodawane są aromaty i barwniki.</p>
             
@@ -60,6 +61,7 @@
                 </div>
                 
             </div>
+            
             <div class="row">
                 <img alt="cukierki" class="image" src="logo.jpg">
                 
@@ -67,6 +69,48 @@
 
         
         </section>
+
+
+        <div class="ticbackground">
+    
+            <section class="tictitle">
+                <h1>Kółko i krzyżyk</h1>
+            </section>
+
+            <section class="display">
+                Ruch gracza <span class="display-player playerX">X</span>
+            </section>
+
+            <section class="container">
+                <div class="tile"></div>
+                <div class="tile"></div>
+                <div class="tile"></div>
+                <div class="tile"></div>
+                <div class="tile"></div>
+                <div class="tile"></div>
+                <div class="tile"></div>
+                <div class="tile"></div>
+                <div class="tile"></div>
+            </section>
+
+            <section class="display announcer hide"></section>
+
+            <section class="controls">
+
+                <div>
+                    <button id="reset">Graj ze znajomym</button>   
+                </div>   
+                    
+                <div>
+                    <button id="computer">Graj z komputerem</button>   
+                </div>
+
+                <div>
+                    <button id="start">Komputer zaczyna</button>   
+                </div> 
+                    
+            </section>
+        </div>
 
     </main>
 
@@ -79,6 +123,8 @@
             </div>      
         </div>          
     </footer>
+
+
 
     </body>
 </html>
