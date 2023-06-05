@@ -1,0 +1,88 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif, cursive;
+}
+.background {
+    background-color: #12181B;
+    width: 100%;
+    height: 100%;
+   
+}
+
+.title {
+    color: white;
+    text-align: center;
+    font-size: 40px;
+}
+
+.display {
+    color: white;
+    font-size: 25px;
+    text-align: center;
+    margin-top: 1em;
+    margin-bottom: 3em;
+}
+
+.hide {
+    display: none;
+}
+
+.container {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: 33% 33% 33%;
+    max-width: 300px;
+}
+.tile{
+    border: 1px solid rgba(234, 215, 215, 0.323);
+    min-width: 100px;
+    min-height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    cursor: pointer;
+}
+
+.playerX{
+    color: blueviolet;
+}
+.playerO{
+    color: rgb(218, 102, 53);
+}
+.controls {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1em;
+}
+
+.controls button {
+    color: white;
+    padding: 8px;
+    border-radius: 8px;
+    border: none;
+    font-size: 20px;
+    margin-left: 1em;
+    cursor: pointer;
+}
+
+.restart {
+    background-color: #498AFB;
+    margin-bottom: 5%;
+}
+#reset {
+    background-color: #c61c96;
+    margin-bottom: 5%;
+}
+#computer{
+    background-color: #498AFB;
+    margin-bottom: 5%;
+}
+#start{
+    background-color: #d49c2c;
+    margin-bottom: 5%;
+}
