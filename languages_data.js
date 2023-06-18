@@ -1,5 +1,5 @@
 const data = {
-    polish: {
+    pl: {
          title: "Irysy - sklep z cukierkami",
          description: "Chyba każdy pamięta krówkę ciągutkę albo niesamowity, ponadczasowy i kultowy smak irysów...",
          ticmenu: "Kółko i krzyżyk",
@@ -18,7 +18,7 @@ const data = {
          playwithcomputer:"Graj z komputerem",
          computerfirst: "Komputer zaczyna",
     },
-    slovenian: {
+    sl: {
         title: "Irysy - slaščičarna",
         description: "Mislim, da se vsi spomnimo kravjega karamela ali neverjetnega, brezčasnega in ikoničnega okusa irisov...",
         ticmenu: "Igra križec krožec",
@@ -37,7 +37,7 @@ const data = {
         playwithcomputer: "Igraj s računalnikom",
         computerfirst: "Računalnik začne",
         },
-    english: {
+    en: {
          title: "Irysy - sweetshop",
          description: "I think everyone remembers the cow caramel or the amazing, timeless, and iconic taste of irises...",
          ticmenu: "TicTacToe",
