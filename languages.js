@@ -1,4 +1,4 @@
-import {data} from 'languages_data.js';
+import {data} from './languages_data';
 
 let langs = document.querySelector(".langs"),
      link = document.querySelectorAll(".langs a"),
