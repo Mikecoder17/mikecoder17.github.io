@@ -248,7 +248,39 @@ footer {
    
 }
 
+.langs{
+    width: 150px;
+    background: #1AC1F5;
+    text-align: center;
+    margin: 10px 20px;
+    padding: 12px 24px;
 
+
+}
+.langs a{
+    color: white;
+    padding: 10 px;
+    font-weight: 650;
+    transition: .3s linear;
+
+}
+.langs a :hover{
+    background: #dbc716;
+
+}
+.langs a.active{
+    background: #4b5659;
+
+}
+
+.title{
+    text-align: center;
+    font-size: 40px;
+    margin: 15px;
+}
+.description{
+    padding: 0 100px;
+}
 
     
 
