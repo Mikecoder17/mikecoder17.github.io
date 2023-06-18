@@ -26,7 +26,7 @@ link.forEach(el=>{
           langs.querySelector(".active").classList.remove("active");
           el.classList.add("active");
 
-          let attr = el.getAttribute("language")
+          let attr = el.getAttribute("hreflang")
 
           title.textContent = data[attr].title
           descr.textContent = data[attr].description
