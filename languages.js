@@ -1,4 +1,6 @@
-import {data} from './languages_data';
+import("./languages_data")
+
+// console.log(data.authotdesc)
 
 let langs = document.querySelector(".langs"),
      link = document.querySelectorAll(".langs a"),

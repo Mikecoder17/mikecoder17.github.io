@@ -1,4 +1,4 @@
-export const data = {
+const data = {
     polish: {
          title: "Irysy - sklep z cukierkami",
          description: "Chyba każdy pamięta krówkę ciągutkę albo niesamowity, ponadczasowy i kultowy smak irysów...",
@@ -43,3 +43,4 @@ export const data = {
     },
     
 }
+export {data}
