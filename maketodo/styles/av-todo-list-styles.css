@@ -1,0 +1,63 @@
+/* Cześć Dostępności czasowej */
+
+.av-grid,
+.av-input,
+.av-input-grid-labels{
+  display: grid;
+  grid-template-columns: 250px 100px 100px 130px 100px;
+  column-gap: 40px;
+  row-gap: 10px;
+  margin-bottom: 10px;
+  align-items: stretch;
+  font-size: large;
+  padding: 10px;
+  align-items: center;
+}
+.av-grid{
+  margin-bottom: 50px;
+}
+.av-input-grid-labels{
+  background-color: rgb(181, 185, 213);
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.av-input{
+  align-items: center;
+}
+
+.duration-input,
+.date-input,
+.start-time-input,
+.end-time-input,
+.urgency-input,
+.importancy-input
+{
+  font-size: 15px;
+  padding: 6px;
+  font-family: Arial;
+}
+
+/* Buttony */
+.add-av-button{
+  background-color: green;
+  color: white;
+  border: none;
+  font-size: 15px;
+  cursor: pointer;
+  border-radius: 10px;
+  padding: 10px;
+  
+}
+.delete-av-button{
+  background-color: darkred;
+  color:white;
+  border: none;
+  font-size: 15px;
+  cursor: pointer;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 100%;
+  border-radius: 10px;
+}
+

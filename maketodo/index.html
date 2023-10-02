@@ -1,0 +1,95 @@
+<!-- 
+warianty - eisenhower
+- podać czas dostępności
+
+Dane zadania:
+- tytuł
+- ważność
+- pilność
+- szacowany czas trwania
+  
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CactusCalendar-2-web</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styles/to-do-list-project-v2.css">
+    <link rel="stylesheet" href="styles/av-todo-list-styles.css">
+  </head>
+  <body>
+    <div class="instructions-modal" style="display: none;">Jest w pyte</div>
+
+    <div class="form">
+      <div class="form-header">
+        <div>
+          <p class="form-title">Cactus Calendar 2 - generator harmonogramu</p>
+        </div>
+
+        <!-- <div>
+          <button id="id01" onclick="document.querySelector('.instructions-modal').style.display='block'">Open Modal</button>
+        </div> -->
+
+      </div>
+
+      <div class="av-input-grid-labels">
+        <label for="date">Dzień</label>
+        <label for="start-time">Od której?</label>
+        <label for="end-time">Do której?</label>
+      </div>
+
+      <div class="av-input">
+        <input type="date" class="js-av-date-input date-input" id="date">
+        <input type="time" class="js-av-start-time-input start-time-input" id="start-time">
+        <input type="time" class="js-av-end-time-input end-time-input" id="end-time">
+        <label for="duration">Dostępny czas</label>
+
+        <button class="add-av-button js-add-av-button">Dodaj</button> 
+      </div>
+
+      <div class="js-av-list av-grid"></div>
+
+      <div class="todo-input-grid-labels">
+        <label for="todo-name"> Nazwa zadania</label>
+        <label for="urgency"> Jak pilne?</label>
+        <label for="importancy"> Jak ważne?</label>
+        <label for="duration">Ile zajmie? (godz.)</label>
+
+      </div>
+      <div class="todo-input-grid">
+
+        <!-- name -->
+        <input placeholder="Zadanie" class="js-name-todo-input name-input"  id="todo-name">
+        
+        <!-- urgency -->
+        <input type="range" class="js-urgency urgency-input" value="urgent" min="0" max="100" id="urgency">
+  
+        <!-- importancy -->
+        <input type="range" class="js-importancy importancy-input" value="important" min="0" max="100" id="importancy">
+      
+        <!-- estimated time -->
+        <input placeholder="4 h" type="number" class="js-duration duration-input" min="0" max="12" step="0.25" id="duration" onkeydown="ifEnter(event)">
+
+        <!-- add button -->
+        <button class="add-todo-button js-add-todo-button">Dodaj</button>  
+
+      </div>
+
+      <div class="js-todo-list todo-grid"></div>
+      <button class="js-generate-schedule-button generate-schedule-button">Wygeneruj harmonogram</button>
+
+      <div class="js-calendar-div"></div>
+
+      <!-- <input type="button" id="dwn-btn" value="Download dynamically generated text file"/> -->
+      
+      <script src="scripts/av-todo-list.js"></script>
+      <script src="scripts/todo-list-project-v2.js"></script>
+      <script src="scripts/algorithm.js"></script>
+
+  </div>
+  </body>
+</html>

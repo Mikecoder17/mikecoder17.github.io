@@ -1,0 +1,144 @@
+/* ogólne */
+body{
+  font-family: Arial;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  background-color: #003F89;
+}
+
+/* Formularz  */
+.form-title{
+  font-size: 30px;
+  position: center;  
+
+}
+.form{
+  background-color: aliceblue;
+  padding: 20px;
+  border-radius: 20px;
+}
+/* Nagłówek */
+.form-header{
+  display: flex;
+  align-items: center;
+}
+
+
+/* Modal */
+
+/* Część Zadaniowa */
+.todo-input-grid,
+.todo-input-grid-labels
+{
+  display: grid;
+  grid-template-columns: 250px 100px 100px 130px 100px; 
+  column-gap: 40px;
+  row-gap: 10px;
+  padding: 10px;
+  align-items: center;
+
+
+} /*szerokosc kazdej kolumny*/
+.todo-grid{
+  font-size: 100%;
+}
+.todo-task{
+  display: grid;
+  grid-template-columns: 250px 100px 100px 130px 100px; 
+  column-gap: 40px;
+  row-gap: 10px;
+  padding: 10px;
+  align-items: center;
+  border: solid;
+  border-color: rgb(231, 196, 132);
+  border-width: 1px;
+  border-radius: 10px;
+  margin-top: 10px;
+
+}
+
+.todo-input-grid{
+  margin-bottom: 10px;
+  align-items: stretch;
+}
+
+.todo-input-grid-labels{
+  grid-template-columns: 250px 100px 100px 150px 100px; 
+  font-size: large;
+  margin-bottom: 10px;
+  background-color: rgb(181, 185, 213);
+  border-radius: 10px;
+  
+}
+
+.name-input{
+  font-size: 15px;
+  padding: 6px;
+}
+
+.add-todo-button,
+.delete-todo-button,
+.generate-schedule-button,
+.calendar-button,
+.add-av-button,
+.delete-av-button{
+  box-shadow: 0px 4px 1px #999;
+  opacity: 1;
+  transition: 0.3s;
+}
+
+/* Buttony */
+button:hover {
+  opacity: 0.7;
+}
+button:active{
+  opacity: 0.3;
+}
+
+.add-todo-button{
+  background-color: green;
+  color: white;
+  border: none;
+  font-size: 15px;
+  cursor: pointer;
+  border-radius: 10px; 
+  padding: 10px;
+}
+.delete-todo-button{
+  background-color: darkred;
+  color:white;
+  border: none;
+  font-size: 15px;
+  cursor: pointer;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 100%;
+  border-radius: 10px;
+}
+
+.generate-schedule-button{
+  background-color: orange;
+  color:white;
+  border: none;
+  font-size: 15px;
+  cursor: pointer;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 100%;
+  border-radius: 10px;
+  margin-top: 20px;
+  padding: 10px;
+}
+.calendar-button{
+  background-color: darkgreen;
+  color:white;
+  border: none;
+  font-size: 15px;
+  cursor: pointer;
+  width: 30%;
+  border-radius: 10px;
+  margin-top: 20px;
+  padding: 10px;
+}
+
