@@ -22,17 +22,26 @@ Dane zadania:
     <link rel="stylesheet" href="styles/av-todo-list-styles.css">
   </head>
   <body>
-    <div class="instructions-modal" style="display: none;">Jest w pyte</div>
+  <!-- Instructions modal -->
+    <div class="instructions-modal">
+      <div class="modal-main">
+        <div class="modal-content">
+        
+            <button class="close-info-button"onclick="document.querySelector('.instructions-modal').style.display='none'">Zamknij instrukcje</button>
+        </div>
+      </div>  
+    </div>
 
+  <!-- Form -->
     <div class="form">
       <div class="form-header">
         <div>
           <p class="form-title">Cactus Calendar 2 - generator harmonogramu</p>
         </div>
 
-        <!-- <div>
-          <button id="id01" onclick="document.querySelector('.instructions-modal').style.display='block'">Open Modal</button>
-        </div> -->
+        <div>
+          <button class="info-button btn" onclick="document.querySelector('.instructions-modal').style.display='block'">Info &nbsp&nbsp <i class="fa fa-info"></i></button>
+        </div>
 
       </div>
 
@@ -57,7 +66,7 @@ Dane zadania:
         <label for="todo-name"> Nazwa zadania</label>
         <label for="urgency"> Jak pilne?</label>
         <label for="importancy"> Jak ważne?</label>
-        <label for="duration">Ile zajmie? (godz.)</label>
+        <label for="duration"> Ile zajmie? (godz.)</label>
 
       </div>
       <div class="todo-input-grid">
