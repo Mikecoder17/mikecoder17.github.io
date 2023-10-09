@@ -12,93 +12,164 @@ Dane zadania:
 
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CactusCalendar-2-web</title>
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="styles/to-do-list-project-v2.css">
-    <link rel="stylesheet" href="styles/av-todo-list-styles.css">
-  </head>
-  <body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CactusCalendar-2-web</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="styles/to-do-list-project-v2.css">
+  <link rel="stylesheet" href="styles/av-todo-list-styles.css">
+</head>
+
+<body>
   <!-- Instructions modal -->
-    <div class="instructions-modal">
-      <div class="modal-main">
-        <div class="modal-content">
-        
-            <button class="close-info-button"onclick="document.querySelector('.instructions-modal').style.display='none'">Zamknij instrukcje</button>
-        </div>
-      </div>  
+  <div class="instructions-modal">
+    <div class="modal-main">
+      <div class="modal-content">
+        <h1>Harmonogram - instrukcja</h1>
+
+        <h2>Etap I - dyspozycyjność czasowa</h2>
+        <ul>
+          <li>
+            Wpisz przedziały czasowe, w których jesteś <b>dostępny/na</b>. <br />Na przykład masz wolny
+            wtorek wieczorem od 15 do 17 i czwartek od 8 do 10.30, to wpisz osobno oba przedziały, wybierając odowiedni
+            dzień oraz godzinę rozpoczęcia oraz zakończenia dostępnego czasu. <br /><b>Używaj
+              tab do szybkiego
+              poruszania
+              się między lukami!</b>
+          </li>
+          <li>Na końcu kliknij "dodaj".</li>
+
+        </ul>
+
+        <h2>Etap II - Zadania</h2>
+        <p>Wpisz zadania dodając kolejno:<br />
+        <ul>
+          <li>Nazwę zadania</li>
+          <li>Pilność zadania - to znaczy jaki <b> priorytet </b> ma dane zadanie (czy powinno zostać zrobione w
+            pierwszej
+            kolejności). Ważne - <b>nie oceniasz w tym miejscu ważności/istotności zadania! </b>, zadanie może być
+            trywialne
+            np. odpisać na maila, ale musi zostać wykonane jak najszybciej, dlatego dostaje wysoki priorytet. Oceniasz
+            suwakiem w skali 0-100%, im
+            wyższa wartość, tym wyższy priorytet.</li>
+          <li>Ważność zadania - to znaczy jak <b> ważne </b> jest dane zadanie (czy dużo od niego zależy/). Uwaga -
+            <b>nie oceniasz w tym miejscu priorytetu zadania! </b>, zadanie może być
+            niepilne
+            np. napisać rodział pracy inżynierskiej w sytuacji gdy pozostał jeszcze rok, ale dotyczy istotnej rzeczy i
+            koniecznej do wykonania rzeczy, dlatego dostaje wysoką ważność. Oceniasz suwakiem w
+            skali 0-100%, im
+            wyższa wartość, tym ważniejsze jest zadanie.
+          </li>
+          <li> Szacowany czas wykonania - w tym miejscu szacujesz ile zajmie Ci wykonanie danego zadania. Np. powtórka
+            fiszek z nowego języka średnio 30min - wpisujesz w formularzu 0.5 godziny. <b>Uwaga - czas wpisujesz w
+              godzinach, tzn 1.25 h to 1 godzina oraz 1/4 godziny czyli 1 godzina 15 min, a nie 1 godzina 25 minut! </b>
+          <li>Na końcu kliknij "dodaj".</li>
+          </li>
+        </ul>
+        <h2>
+          Etap III - kliknij przycisk "Wygeneruj harmonogram"
+        </h2>
+        <h3>
+          Jak działa algorytm?
+        </h3>
+        <p>Algorytm sortuje zadania w pierwszej kolejności według ich pilności, a przy równym stopniu pilności, dalej
+          według stopnia ważności. Następnie bierze po kolei z listy najbardziej pilne zadanie i szuka dla niego
+          pierwszego dostępnego terminu, który zapewnia odpowiednią ilość czasu. <b>Uwaga! - program nie dzieli
+            samodzielnie zadań na części</b>, tzn. jeżeli dyspozycyjność to np. 10-11 w poniedziałek oraz 18-21 we
+          wtorek, a zadanie które ma zostać dopasowane będzie szacunkowo trwało 2 godziny, to <b>nie zostanie podzielone
+            w stosunku 1 godz. w poniedziałek + 1 godzina we wtorek</b>. W pełni będzie przypisane do wtorku (od 18 do
+          20). 
+
+          Projekt bazuje na koncepcie macierzy Eisenhowera, sortowania zadań według kryteriów ważności i pilności.</p>
+
+        <h3>
+          Co dalej?
+        </h3>
+        <p>Wygenerowany zostanie plik CSV z harmonogramem gotowym do wgrania w Google Calendar. Następnie można kiknąć w
+          przycisk "Otwórz Google Calendar". Tam, po zalogowaniu, w miejscu "Wybierz plik z komputera" kliknąć i dodać
+          wygenerowany plik CSV oraz zatwierdzić przyciskiem "IMPORTUJ". Gotowe! Sprawdź czy w twoim kalendarzu
+          wydarzenia zostały dodane poprawnie.</p>
+
+        <button class="close-info-button"
+          onclick="document.querySelector('.instructions-modal').style.display='none'">Zamknij instrukcje</button>
+      </div>
     </div>
+  </div>
 
   <!-- Form -->
-    <div class="form">
-      <div class="form-header">
-        <div>
-          <p class="form-title">Cactus Calendar 2 - generator harmonogramu</p>
-        </div>
-
-        <div>
-          <button class="info-button btn" onclick="document.querySelector('.instructions-modal').style.display='block'">Info &nbsp&nbsp <i class="fa fa-info"></i></button>
-        </div>
-
+  <div class="form">
+    <div class="form-header">
+      <div>
+        <p class="form-title">Cactus Calendar 2 - generator harmonogramu</p>
       </div>
 
-      <div class="av-input-grid-labels">
-        <label for="date">Dzień</label>
-        <label for="start-time">Od której?</label>
-        <label for="end-time">Do której?</label>
+      <div>
+        <button class="info-button btn"
+          onclick="document.querySelector('.instructions-modal').style.display='block'">Info &nbsp&nbsp <i
+            class="fa fa-info"></i></button>
       </div>
 
-      <div class="av-input">
-        <input type="date" class="js-av-date-input date-input" id="date">
-        <input type="time" class="js-av-start-time-input start-time-input" id="start-time">
-        <input type="time" class="js-av-end-time-input end-time-input" id="end-time">
-        <label for="duration">Dostępny czas</label>
+    </div>
 
-        <button class="add-av-button js-add-av-button">Dodaj</button> 
-      </div>
+    <div class="av-input-grid-labels">
+      <label for="date">Dzień</label>
+      <label for="start-time">Od której?</label>
+      <label for="end-time">Do której?</label>
+    </div>
 
-      <div class="js-av-list av-grid"></div>
+    <div class="av-input">
+      <input type="date" class="js-av-date-input date-input" id="date">
+      <input type="time" class="js-av-start-time-input start-time-input" id="start-time">
+      <input type="time" class="js-av-end-time-input end-time-input" id="end-time">
+      <label for="duration">Dostępny czas</label>
 
-      <div class="todo-input-grid-labels">
-        <label for="todo-name"> Nazwa zadania</label>
-        <label for="urgency"> Jak pilne?</label>
-        <label for="importancy"> Jak ważne?</label>
-        <label for="duration"> Ile zajmie? (godz.)</label>
+      <button class="add-av-button js-add-av-button">Dodaj</button>
+    </div>
 
-      </div>
-      <div class="todo-input-grid">
+    <div class="js-av-list av-grid"></div>
 
-        <!-- name -->
-        <input placeholder="Zadanie" class="js-name-todo-input name-input"  id="todo-name">
-        
-        <!-- urgency -->
-        <input type="range" class="js-urgency urgency-input" value="urgent" min="0" max="100" id="urgency">
-  
-        <!-- importancy -->
-        <input type="range" class="js-importancy importancy-input" value="important" min="0" max="100" id="importancy">
-      
-        <!-- estimated time -->
-        <input placeholder="4 h" type="number" class="js-duration duration-input" min="0" max="12" step="0.25" id="duration" onkeydown="ifEnter(event)">
+    <div class="todo-input-grid-labels">
+      <label for="todo-name"> Nazwa zadania</label>
+      <label for="urgency"> Jak pilne?</label>
+      <label for="importancy"> Jak ważne?</label>
+      <label for="duration"> Ile zajmie? (godz.)</label>
 
-        <!-- add button -->
-        <button class="add-todo-button js-add-todo-button">Dodaj</button>  
+    </div>
+    <div class="todo-input-grid">
 
-      </div>
+      <!-- name -->
+      <input placeholder="Zadanie" class="js-name-todo-input name-input" id="todo-name">
 
-      <div class="js-todo-list todo-grid"></div>
-      <button class="js-generate-schedule-button generate-schedule-button">Wygeneruj harmonogram</button>
+      <!-- urgency -->
+      <input type="range" class="js-urgency urgency-input" value="urgent" min="0" max="100" id="urgency">
 
-      <div class="js-calendar-div"></div>
+      <!-- importancy -->
+      <input type="range" class="js-importancy importancy-input" value="important" min="0" max="100" id="importancy">
 
-      <!-- <input type="button" id="dwn-btn" value="Download dynamically generated text file"/> -->
-      
-      <script src="scripts/av-todo-list.js"></script>
-      <script src="scripts/todo-list-project-v2.js"></script>
-      <script src="scripts/algorithm.js"></script>
+      <!-- estimated time -->
+      <input placeholder="4 h" type="number" class="js-duration duration-input" min="0" max="12" step="0.25"
+        id="duration" onkeydown="ifEnter(event)">
+
+      <!-- add button -->
+      <button class="add-todo-button js-add-todo-button">Dodaj</button>
+
+    </div>
+
+    <div class="js-todo-list todo-grid"></div>
+    <button class="js-generate-schedule-button generate-schedule-button">Wygeneruj harmonogram</button>
+
+    <div class="js-calendar-div"></div>
+
+    <!-- <input type="button" id="dwn-btn" value="Download dynamically generated text file"/> -->
+
+    <script src="scripts/av-todo-list.js"></script>
+    <script src="scripts/todo-list-project-v2.js"></script>
+    <script src="scripts/algorithm.js"></script>
 
   </div>
-  </body>
+</body>
+
 </html>

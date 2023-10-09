@@ -1,5 +1,5 @@
 /* ogólne */
-body{
+body {
   font-family: Arial;
   align-items: center;
   display: flex;
@@ -8,56 +8,58 @@ body{
 }
 
 /* Formularz  */
-.form-title{
+.form-title {
   font-size: 30px;
-  position: center;  
+  position: center;
 
 }
-.form{
+
+.form {
+  margin-top: 50px;
   background-color: aliceblue;
   padding: 20px;
   border-radius: 20px;
   box-shadow: 0px 4px 1px #99999918;
 }
+
 /* Nagłówek */
-.form-header{
+.form-header {
   display: flex;
   align-items: center;
 }
 
 
 /* Modal */
-.instructions-modal{
+.instructions-modal {
   display: none;
 }
 
-.modal-main{
-  z-index:3;
-  padding-top:100px;
-  position:fixed;
-  left:0;
-  top:0;
-  width:100%;
-  height:100%;
-  overflow:auto;
-  background-color:rgb(0,0,0);
-  background-color:rgba(0,0,0,0.4)
+.modal-main {
+  z-index: 3;
+  padding-top: 100px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 80%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4)
 }
 
-.modal-content{
-  margin:auto;
-  background-color:#fff;
-  position:relative;
-  padding:20px;
-  outline:0;
-  width:600px;
+.modal-content {
+  margin: auto;
+  background-color: #fff;
+  position: relative;
+  padding: 20px;
+  outline: 0;
+  width: 80%;
   border-radius: 20px;
 }
-    
+
 .info-button,
-.close-info-button
-{
-  color:white;
+.close-info-button {
+  color: white;
   border: none;
   font-size: 15px;
   cursor: pointer;
@@ -66,35 +68,39 @@ body{
   width: 100%;
   border-radius: 10px;
 }
-.info-button
-{
+
+.info-button {
   background-color: rgb(87, 192, 213);
   margin-left: 90px;
 
 }
-.close-info-button{
+
+.close-info-button {
   background-color: rgb(238, 58, 58);
 }
 
+
 /* Część Zadaniowa */
 .todo-input-grid,
-.todo-input-grid-labels
-{
+.todo-input-grid-labels {
   display: grid;
-  grid-template-columns: 250px 100px 100px 130px 100px; 
+  grid-template-columns: 250px 100px 100px 130px 100px;
   column-gap: 40px;
   row-gap: 10px;
   padding: 10px;
   align-items: center;
 
 
-} /*szerokosc kazdej kolumny*/
-.todo-grid{
+}
+
+/*szerokosc kazdej kolumny*/
+.todo-grid {
   font-size: 100%;
 }
-.todo-task{
+
+.todo-task {
   display: grid;
-  grid-template-columns: 250px 100px 100px 130px 100px; 
+  grid-template-columns: 250px 100px 100px 130px 100px;
   column-gap: 40px;
   row-gap: 10px;
   padding: 10px;
@@ -107,21 +113,21 @@ body{
 
 }
 
-.todo-input-grid{
+.todo-input-grid {
   margin-bottom: 10px;
   align-items: stretch;
 }
 
-.todo-input-grid-labels{
-  grid-template-columns: 250px 100px 100px 150px 100px; 
+.todo-input-grid-labels {
+  grid-template-columns: 250px 100px 100px 150px 100px;
   font-size: large;
   margin-bottom: 10px;
   background-color: rgb(181, 185, 213);
   border-radius: 10px;
-  
+
 }
 
-.name-input{
+.name-input {
   font-size: 15px;
   padding: 6px;
 }
@@ -132,7 +138,7 @@ body{
 .calendar-button,
 .add-av-button,
 .delete-av-button,
-.info-button{
+.info-button {
   box-shadow: 0px 4px 1px #999;
   opacity: 1;
   transition: 0.3s;
@@ -142,22 +148,24 @@ body{
 button:hover {
   opacity: 0.7;
 }
-button:active{
+
+button:active {
   opacity: 0.3;
 }
 
-.add-todo-button{
+.add-todo-button {
   background-color: green;
   color: white;
   border: none;
   font-size: 15px;
   cursor: pointer;
-  border-radius: 10px; 
+  border-radius: 10px;
   padding: 10px;
 }
-.delete-todo-button{
+
+.delete-todo-button {
   background-color: darkred;
-  color:white;
+  color: white;
   border: none;
   font-size: 15px;
   cursor: pointer;
@@ -167,9 +175,9 @@ button:active{
   border-radius: 10px;
 }
 
-.generate-schedule-button{
+.generate-schedule-button {
   background-color: orange;
-  color:white;
+  color: white;
   border: none;
   font-size: 15px;
   cursor: pointer;
@@ -180,9 +188,10 @@ button:active{
   margin-top: 20px;
   padding: 10px;
 }
-.calendar-button{
+
+.calendar-button {
   background-color: darkgreen;
-  color:white;
+  color: white;
   border: none;
   font-size: 15px;
   cursor: pointer;
@@ -191,4 +200,3 @@ button:active{
   margin-top: 20px;
   padding: 10px;
 }
-
