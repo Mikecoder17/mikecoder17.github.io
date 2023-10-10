@@ -1,8 +1,6 @@
 /* Cześć Dostępności czasowej */
-
-.av-grid,
 .av-input,
-.av-input-grid-labels{
+.av-input-grid-labels {
   display: grid;
   grid-template-columns: 250px 100px 100px 130px 100px;
   column-gap: 40px;
@@ -13,17 +11,33 @@
   padding: 10px;
   align-items: center;
 }
-.av-grid{
+
+.av-grid {
   margin-bottom: 50px;
 }
-.av-input-grid-labels{
+
+.av-input-grid-labels {
   background-color: rgb(181, 185, 213);
   padding: 10px;
   border-radius: 10px;
 }
 
-.av-input{
+.av-input {
   align-items: center;
+}
+
+.av-time {
+  display: grid;
+  grid-template-columns: 250px 100px 100px 130px 100px;
+  column-gap: 40px;
+  row-gap: 10px;
+  padding: 10px;
+  align-items: center;
+  border: solid;
+  border-color: rgb(231, 196, 132);
+  border-width: 1px;
+  border-radius: 10px;
+  margin-top: 10px;
 }
 
 .duration-input,
@@ -31,15 +45,14 @@
 .start-time-input,
 .end-time-input,
 .urgency-input,
-.importancy-input
-{
+.importancy-input {
   font-size: 15px;
   padding: 6px;
   font-family: Arial;
 }
 
 /* Buttony */
-.add-av-button{
+.add-av-button {
   background-color: green;
   color: white;
   border: none;
@@ -47,11 +60,11 @@
   cursor: pointer;
   border-radius: 10px;
   padding: 10px;
-  
 }
-.delete-av-button{
+
+.delete-av-button {
   background-color: darkred;
-  color:white;
+  color: white;
   border: none;
   font-size: 15px;
   cursor: pointer;
@@ -60,4 +73,3 @@
   width: 100%;
   border-radius: 10px;
 }
-

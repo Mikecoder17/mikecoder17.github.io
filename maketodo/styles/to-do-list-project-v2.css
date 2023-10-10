@@ -10,12 +10,10 @@ body {
 /* Formularz  */
 .form-title {
   font-size: 30px;
-  position: center;
-
 }
 
 .form {
-  margin-top: 50px;
+  margin-top: 30px;
   background-color: aliceblue;
   padding: 20px;
   border-radius: 20px;
@@ -26,35 +24,6 @@ body {
 .form-header {
   display: flex;
   align-items: center;
-}
-
-
-/* Modal */
-.instructions-modal {
-  display: none;
-}
-
-.modal-main {
-  z-index: 3;
-  padding-top: 100px;
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 80%;
-  overflow: auto;
-  background-color: rgb(0, 0, 0);
-  background-color: rgba(0, 0, 0, 0.4)
-}
-
-.modal-content {
-  margin: auto;
-  background-color: #fff;
-  position: relative;
-  padding: 20px;
-  outline: 0;
-  width: 80%;
-  border-radius: 20px;
 }
 
 .info-button,
@@ -81,7 +50,6 @@ body {
   background-color: rgb(238, 58, 58);
 }
 
-
 /* Część Zadaniowa */
 .todo-input-grid,
 .todo-input-grid-labels {
@@ -91,11 +59,8 @@ body {
   row-gap: 10px;
   padding: 10px;
   align-items: center;
-
-
 }
 
-/*szerokosc kazdej kolumny*/
 .todo-grid {
   font-size: 100%;
 }
@@ -138,6 +103,7 @@ body {
 .delete-todo-button,
 .generate-schedule-button,
 .calendar-button,
+.pdf-button,
 .add-av-button,
 .delete-av-button,
 .info-button {
@@ -193,6 +159,18 @@ button:active {
 
 .calendar-button {
   background-color: darkgreen;
+  color: white;
+  border: none;
+  font-size: 15px;
+  cursor: pointer;
+  width: 30%;
+  border-radius: 10px;
+  margin-top: 20px;
+  padding: 10px;
+}
+
+.pdf-button {
+  background-color: rgb(211, 57, 57);
   color: white;
   border: none;
   font-size: 15px;

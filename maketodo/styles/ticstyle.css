@@ -1,22 +1,23 @@
-*{
+* {
     padding: 0;
     margin: 0;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif, cursive;
 }
+
 .background {
     background-color: #12181B;
     width: 100%;
     height: 100%;
-   
 }
 
-.tictitle h1{
+.tictitle h1 {
     color: white;
     text-align: center;
     font-size: 40px;
 }
+
 .tictitle {
-   margin:auto;
+    margin: auto;
 }
 
 .display {
@@ -38,7 +39,8 @@
     grid-template-rows: 33% 33% 33%;
     max-width: 300px;
 }
-.tile{
+
+.tile {
     border: 1px solid rgba(234, 215, 215, 0.323);
     min-width: 100px;
     min-height: 100px;
@@ -49,12 +51,14 @@
     cursor: pointer;
 }
 
-.playerX{
+.playerX {
     color: blueviolet;
 }
-.playerO{
+
+.playerO {
     color: rgb(218, 102, 53);
 }
+
 .controls {
     display: flex;
     flex-direction: row;
@@ -78,15 +82,18 @@
     background-color: #498AFB;
     margin-bottom: 5%;
 }
+
 #reset {
     background-color: #c61c96;
     margin-bottom: 5%;
 }
-#computer{
+
+#computer {
     background-color: #498AFB;
     margin-bottom: 5%;
 }
-#start{
+
+#start {
     background-color: #d49c2c;
     margin-bottom: 5%;
 }

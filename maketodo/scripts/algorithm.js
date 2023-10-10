@@ -1,14 +1,14 @@
-let scheduleList=[
+let scheduleList = [
   //Subject:
   //Start date:
   //Start time:
   //End date:
   //End time:
-  //Description: (optional - ważne/nie ważne)
+  //Description: (optional - in the future)
 ];
 
-function todoAlg(todoList, avList){
-  scheduleList=[];
+function todoAlg(todoList, avList) {
+  scheduleList = [];
 
   const tempTodoList = todoList.map(object => ({ ...object }));
   const tempAvList = avList.map(object => ({ ...object }));
@@ -18,16 +18,16 @@ function todoAlg(todoList, avList){
   // jak się mieści, dodaj do schedule list i odejmij ten czas z tego wolnego o tyle ile trwa ta czynności
   // jak się nie mieści przejdź do kolejnego datowo
   // jeżeli wgl nie znajdzie to komunikat "za mało dostępnego czasu na realizację zadania"
- 
-  tempTodoList.forEach((todo) =>{
-    let isChoosen = false;
-    
-    for (let i = 0; i < tempAvList.length; i++){
 
-      if(tempAvList[i].avDuration + 0.01 >= todo.duration){   
+  tempTodoList.forEach((todo) => {
+    let isChoosen = false;
+
+    for (let i = 0; i < tempAvList.length; i++) {
+
+      if (tempAvList[i].avDuration + 0.01 >= todo.duration) {
         scheduleList.push({
           'Subject': todo.name,
-          'Start date': (tempAvList[i].startDate).toLocaleDateString('en-US'), 
+          'Start date': (tempAvList[i].startDate).toLocaleDateString('en-US'),
           'Start time': (tempAvList[i].startDate).toLocaleTimeString('en-US'),
           'End date': (createAddDurationDate(tempAvList[i].startDate, todo.duration)).toLocaleDateString('en-US'),
           'End time': (createAddDurationDate(tempAvList[i].startDate, todo.duration)).toLocaleTimeString('en-US')
@@ -42,13 +42,13 @@ function todoAlg(todoList, avList){
         break;
       }
     }
-    if(isChoosen == false){
+    if (isChoosen == false) {
       alert('Za mało dostępnego czasu na zadanie: ' + (todo.name).toString())
     }
-    
+
   });
 
-return(scheduleList);
+  return (scheduleList);
 
 }
 
@@ -58,8 +58,8 @@ function CSV(array) {
   // Build header
   var result = keys.join(",") + "\n";
   // Add the rows
-  array.forEach(function(obj){
-      result += keys.map(k => obj[k]).join(",") + "\n";
+  array.forEach(function (obj) {
+    result += keys.map(k => obj[k]).join(",") + "\n";
   });
   return result;
 }
@@ -75,27 +75,46 @@ function download(filename, text) {
   document.body.removeChild(element);
 }
 
-function addCalendarButton(){
+function addCalendarButton() {
   const html = `
     <button
       class="calendar-button js-calendar-button" 
     >Otwórz Google Calendar</button>
+    <button class="js-generate-pdf-button pdf-button">Wygeneruj pdf</button>
     `;
-    document.querySelector(".js-calendar-div").innerHTML = html;
+  document.querySelector(".js-calendar-div").innerHTML = html;
 
   //event listeners
-  document.querySelector('.js-calendar-button').addEventListener('click',() =>{
-  window.open('https://calendar.google.com/calendar/u/0/r/settings/export');
-});
+  document.querySelector('.js-calendar-button').addEventListener('click', () => {
+    window.open('https://calendar.google.com/calendar/u/0/r/settings/export');
+  });
+  document.querySelector('.js-generate-pdf-button').addEventListener("click", function () {
+    let schedule = todoAlg(todoList, avList);
+    generatePDF(schedule);
+  }, false);
+}
 
+function generatePDF(schedule) {
+  let content = 'Harmonogram \n\n\n';
+  i = 1;
+  schedule.forEach((task) => {
+
+    content += `Zadanie nr ${i} [${(task["Start date"]).toLocaleDateString('en-US')
+      } ${task["Start time"]} do ${task["End time"]}] ${task["Subject"]} \n\n`
+    i += 1;
+  }
+  )
+
+  const doc = new jsPDF();
+  doc.text(content, 10, 10);
+  doc.save("todo.pdf");
 }
 
 //event listeners
-document.querySelector('.js-generate-schedule-button').addEventListener("click", function(){
+document.querySelector('.js-generate-schedule-button').addEventListener("click", function () {
   addCalendarButton();
   let content = CSV(todoAlg(todoList, avList));
   let filename = "todo.csv";
-  
+
   download(filename, content);
 }, false);
-

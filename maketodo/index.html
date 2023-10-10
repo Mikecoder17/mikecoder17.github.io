@@ -1,15 +1,3 @@
-<!-- 
-warianty - eisenhower
-- podać czas dostępności
-
-Dane zadania:
-- tytuł
-- ważność
-- pilność
-- szacowany czas trwania
-  
- -->
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -21,9 +9,11 @@ Dane zadania:
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="styles/to-do-list-project-v2.css">
   <link rel="stylesheet" href="styles/av-todo-list-styles.css">
+  <link rel="stylesheet" href="styles/modal.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
@@ -164,13 +154,12 @@ Dane zadania:
     <div class="js-todo-list todo-grid"></div>
     <button class="js-generate-schedule-button generate-schedule-button">Wygeneruj harmonogram</button>
 
-    <div class="js-calendar-div"></div>
-
-    <!-- <input type="button" id="dwn-btn" value="Download dynamically generated text file"/> -->
+    <div class="js-calendar-div footer-buttons-div"></div>
 
     <script src="scripts/av-todo-list.js"></script>
     <script src="scripts/todo-list-project-v2.js"></script>
     <script src="scripts/algorithm.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.5/jspdf.debug.js"></script>
 
   </div>
 </body>
