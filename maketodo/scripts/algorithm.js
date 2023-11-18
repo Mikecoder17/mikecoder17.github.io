@@ -90,8 +90,9 @@ function addCalendarButton() {
   });
   document.querySelector('.js-generate-pdf-button').addEventListener("click", function () {
     let schedule = todoAlg(todoList, avList);
+
     generatePDF(schedule);
-  }, false);
+  }, true);
 }
 
 function generatePDF(schedule) {
@@ -99,7 +100,7 @@ function generatePDF(schedule) {
   i = 1;
   schedule.forEach((task) => {
 
-    content += `Zadanie nr ${i} [${(task["Start date"]).toLocaleDateString('en-US')
+    content += `Zadanie nr ${i} [${(task["Start date"])
       } ${task["Start time"]} do ${task["End time"]}] ${task["Subject"]} \n\n`
     i += 1;
   }
